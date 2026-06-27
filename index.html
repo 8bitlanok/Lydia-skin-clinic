@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lydia Skin Clinic | LyRich by dr. Lydia – Padangsidimpuan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== -->
+  <!--        NAVBAR         -->
+  <!-- ===================== -->
+  <header class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo + Nama Klinik -->
+      <a href="#beranda" class="nav-logo">
+        <img src="images/logo/awal.jpg" alt="logo dokter " class="logo-img" />
+        <span class="logo-text">Lydia Skin Clinic</span>
+      </a>
+
+      <!-- Menu Links (desktop) -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#dokter">Dokter</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <!-- Tombol Book (desktop) -->
+      <a href="https://wa.me/6281370714324?text=Halo,%20saya%20ingin%20booking%20treatment%20di%20Lydia%20Skin%20Clinic"
+        class="btn-book" target="_blank" rel="noopener noreferrer">
+        Book Sekarang
+      </a>
+
+      <!-- Hamburger Menu (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ===================== -->
+  <!--         HERO          -->
+  <!-- ===================== -->
+  <section id="beranda" class="hero">
+    <div class="hero-container">
+
+      <!-- Teks kiri -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">LyRich by dr. Lydia</p>
+        <h1>Tampil Glowing,<br />Terasa Percaya Diri</h1>
+        <p class="hero-sub">
+          Klinik kecantikan terpercaya di Padangsidimpuan dengan penanganan
+          dokter berpengalaman dan teknologi perawatan kulit modern.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/6281370714324?text=Halo,%20saya%20ingin%20konsultasi%20gratis%20di%20Lydia%20Skin%20Clinic"
+            class="btn-primary" target="_blank" rel="noopener noreferrer">
+            Konsultasi Gratis
+          </a>
+          <a href="#layanan" class="btn-outline">Lihat Layanan</a>
+        </div>
+      </div>
+
+      <!-- Visual kanan (foto dokter/klinik nanti diganti) -->
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <!-- 
+              PANDUAN UNTUK ANDRY:
+              Ganti bagian ini dengan tag <img> saat foto sudah ada.
+              Contoh: <img src="foto-dokter.jpg" alt="dr. Lydia" />
+            -->
+            <img src="images/logo/samping.jpg" alt="logo dokter " />
+          </div>
+          <!-- Badge kecil di bawah foto -->
+          <div class="hero-badge">
+            <span>✨</span>
+            <div>
+              <strong>Dokter Berpengalaman</strong>
+              <p>dr. Lydia Ernawati Rahayu, M.Biomed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!--     TENTANG KLINIK    -->
+  <!-- ===================== -->
+  <section id="tentang" class="about">
+    <div class="container">
+      <div class="section-label">Tentang Kami</div>
+      <h2>Klinik Kecantikan Terpercaya<br />di Padangsidimpuan</h2>
+      <p class="about-desc">
+        Lydia Skin Clinic hadir untuk membantu setiap wanita tampil cantik dan percaya diri
+        dengan perawatan kulit yang aman, efektif, dan ditangani langsung oleh dokter berpengalaman.
+      </p>
+
+      <!-- 3 Keunggulan -->
+      <div class="keunggulan-grid">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">👩‍⚕️</div>
+          <h3>Dokter Berpengalaman</h3>
+          <p>Ditangani langsung oleh dr. Lydia Ernawati Rahayu, M.Biomed (AAM)</p>
+        </div>
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">✨</div>
+          <h3>Treatment Modern</h3>
+          <p>Menggunakan teknologi perawatan kulit terkini yang aman dan terbukti efektif</p>
+        </div>
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">💝</div>
+          <h3>Hasil Nyata</h3>
+          <p>Ratusan pasien sudah merasakan manfaat perawatan di Lydia Skin Clinic</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!--   PROMO MORNING PERSON -->
+  <!-- ===================== -->
+  <section class="promo-morning">
+    <div class="container">
+      <div class="promo-content">
+
+        <!-- Teks promo -->
+        <div class="promo-text">
+          <div class="promo-badge">⏰ Promo Terbatas</div>
+          <h2>Morning Person Promo</h2>
+          <p>Khusus kunjungan pagi hari! Dapatkan treatment pilihan dengan harga spesial yang tidak akan kamu temukan di
+            tempat lain.</p>
+          <p class="promo-time">Berlaku setiap hari pukul <strong>10.00 – 11.30 WIB</strong></p>
+          <a href="https://wa.me/6281370714324?text=Halo,%20saya%20ingin%20klaim%20promo%20Morning%20Person"
+            class="btn-primary" target="_blank" rel="noopener noreferrer">
+            Klaim Promo Sekarang
+          </a>
+        </div>
+
+        <!-- Daftar harga promo -->
+        <div class="promo-list">
+          <div class="promo-item">
+            <span class="promo-name">Smooth Comedo</span>
+            <span class="promo-price">Rp39.000</span>
+          </div>
+          <div class="promo-item">
+            <span class="promo-name">Facial Basic</span>
+            <span class="promo-price">Rp99.000</span>
+          </div>
+          <div class="promo-item">
+            <span class="promo-name">RF Treatment</span>
+            <span class="promo-price">Rp99.000</span>
+          </div>
+          <div class="promo-item">
+            <span class="promo-name">Rich Neck</span>
+            <span class="promo-price">Rp149.000</span>
+          </div>
+          <div class="promo-item">
+            <span class="promo-name">Peeling Ketiak</span>
+            <span class="promo-price">Rp249.000</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!--        LAYANAN        -->
+  <!-- ===================== -->
+  <section id="layanan" class="services">
+    <div class="container">
+      <div class="section-label">Layanan Kami</div>
+      <h2>Treatment Pilihan</h2>
+      <p class="section-sub">Berbagai pilihan perawatan kulit untuk setiap kebutuhan kamu</p>
+
+      <!-- Grid 6 layanan -->
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🌟</div>
+          <h3>HIFU Wajah</h3>
+          <p>Wajah kencang dan tampak muda tanpa operasi. Mengencangkan kulit, mengurangi kerutan, dan mempertegas garis
+            rahang.</p>
+          <span class="service-price">Konsultasi via WA</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💊</div>
+          <h3>IPL Acne</h3>
+          <p>Solusi ampuh untuk jerawat. Menyamarkan bekas jerawat, mengurangi minyak berlebih, dan membunuh bakteri
+            penyebab jerawat.</p>
+          <span class="service-price">Konsultasi via WA</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Super Exosome + PDT</h3>
+          <p>Wajah cerah maksimal dan glowing. Mencerahkan kulit, meningkatkan produksi kolagen, dan memperbaiki skin
+            barrier.</p>
+          <span class="service-price">Konsultasi via WA</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💋</div>
+          <h3>Pico Lips Glowing</h3>
+          <p>Bibir glowing, cerah, dan merah merona. Mencerahkan, menghaluskan, serta menjaga kelembaban bibir secara
+            alami.</p>
+          <span class="service-price">Konsultasi via WA</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🧬</div>
+          <h3>Peeling DNA Salmon</h3>
+          <p>Kulit lebih awet muda dan cerah. Mencegah penuaan dini, mengurangi garis halus, dan merangsang produksi
+            kolagen.</p>
+          <span class="service-price">Konsultasi via WA</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💆</div>
+          <h3>Facial Basic Glowing</h3>
+          <p>Wajah auto glowing dengan 6 tahapan: Double Cleansing, Eksfoliasi, Ekstraksi Komedo, Steam, Masker Premium,
+            Omega Light.</p>
+          <span class="service-price highlight">Rp99.000</span>
+        </div>
+
+      </div>
+
+      <!-- Paket Unggulan -->
+      <div class="section-label packages-label">Paket Unggulan</div>
+      <h2>Hemat Lebih Banyak</h2>
+
+      <div class="packages-grid">
+
+        <div class="package-card">
+          <div class="package-header">
+            <h3>Meso Derma</h3>
+            <p>8x Treatment</p>
+          </div>
+          <div class="package-body">
+            <div class="package-price">Rp2.500.000</div>
+            <ul>
+              <li>✓ 8x sesi treatment</li>
+              <li>✓ Gratis facial setiap sesi</li>
+              <li>✓ Gratis masker setiap sesi</li>
+              <li>✓ Berlaku hingga 1 tahun</li>
+              <li>✓ Memudarkan bekas jerawat</li>
+            </ul>
+            <a href="https://wa.me/6281370714324?text=Halo,%20saya%20tertarik%20paket%20Meso%20Derma"
+              class="btn-primary" target="_blank" rel="noopener noreferrer">
+              Pesan Sekarang
+            </a>
+          </div>
+        </div>
+
+        <div class="package-card featured">
+          <div class="package-badge">Terpopuler</div>
+          <div class="package-header">
+            <h3>LYRICH Skinbooster</h3>
+            <p>6x Treatment</p>
+          </div>
+          <div class="package-body">
+            <div class="package-price-old">Rp3.500.000</div>
+            <div class="package-price">Rp2.500.000</div>
+            <ul>
+              <li>✓ Facial Glow</li>
+              <li>✓ Exfoliation</li>
+              <li>✓ Eye Therapy</li>
+              <li>✓ Oxy Glow</li>
+              <li>✓ PDT Treatment</li>
+            </ul>
+            <a href="https://wa.me/6281370714324?text=Halo,%20saya%20tertarik%20paket%20LYRICH%20Skinbooster"
+              class="btn-primary" target="_blank" rel="noopener noreferrer">
+              Pesan Sekarang
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!--       PROFIL DOKTER   -->
+  <!-- ===================== -->
+  <section id="dokter" class="doctor">
+    <div class="container">
+      <div class="doctor-content">
+
+        <!-- Foto dokter (placeholder, ganti dengan foto asli nanti) -->
+        <img src="images/logo/samping.jpg" alt="logo dokter " />
+
+        <!-- Info dokter -->
+        <div class="doctor-info">
+          <div class="section-label">Profil Dokter</div>
+          <h2>dr. Lydia Ernawati Rahayu, M.Biomed (AAM)</h2>
+          <p class="doctor-title">Dokter Estetika & Kecantikan</p>
+          <p>
+            Dokter Lydia adalah tenaga medis berpengalaman yang berdedikasi dalam bidang
+            estetika dan perawatan kulit. Dengan pendekatan personal dan profesional,
+            dr. Lydia memastikan setiap pasien mendapatkan perawatan terbaik sesuai
+            kondisi kulit masing-masing.
+          </p>
+          <div class="doctor-stats">
+            <div class="stat">
+              <strong>Senin – Sabtu</strong>
+              <span>Jadwal Praktek</span>
+            </div>
+            <div class="stat">
+              <strong>10.00 – 18.00</strong>
+              <span>Jam Praktek WIB</span>
+            </div>
+          </div>
+          <a href="https://wa.me/6281370714324?text=Halo,%20saya%20ingin%20booking%20konsultasi%20dengan%20dr.%20Lydia"
+            class="btn-primary" target="_blank" rel="noopener noreferrer">
+            Booking Konsultasi
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!--       TESTIMONI       -->
+  <!-- ===================== -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="section-label">Testimoni</div>
+      <h2>Apa Kata Mereka?</h2>
+      <p class="section-sub">
+        Ratusan pasien sudah merasakan manfaat perawatan di Lydia Skin Clinic.
+        Lihat langsung cerita mereka di Instagram kami.
+      </p>
+      <a href="https://www.instagram.com/lydiaskinclinic/" target="_blank" rel="noopener noreferrer" class="btn-ig">
+        <span>📸</span> Lihat Testimoni di Instagram
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!--        KONTAK         -->
+  <!-- ===================== -->
+  <section id="kontak" class="contact">
+    <div class="container">
+      <div class="section-label">Kontak</div>
+      <h2>Temukan Kami</h2>
+
+      <div class="contact-grid">
+
+        <!-- Info kontak -->
+        <div class="contact-item">
+          <span class="contact-icon">
+            <!-- Ikon Alamat (Pin Lokasi) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+            </svg>
+          </span>
+          <div>
+            <strong>Alamat</strong>
+            <p>Jalan Cempaka No.11, Padangsidimpuan,<br />Sumatera Utara 22723</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-icon">
+            <!-- Ikon WhatsApp SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+            </svg>
+          </span>
+          <div>
+            <strong>WhatsApp</strong>
+            <p>0813-7071-4324</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-icon">
+            <!-- Ikon Jam Operasional (Jam) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+            </svg>
+          </span>
+          <div>
+            <strong>Jam Operasional</strong>
+            <p>Senin – Sabtu: 10.00 – 18.00 WIB</p>
+            <p>Minggu: Tutup</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-icon">
+            <!-- Ikon Instagram SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+            </svg>
+          </span>
+          <div>
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/lydiaskinclinic/" target="_blank"
+              rel="noopener noreferrer">@lydiaskinclinic</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google Maps -->
+      <div class="contact-map">
+        <iframe
+          src="https://maps.google.com/maps?q=Jalan+Cempaka+No.11+Padangsidimpuan+Sumatera+Utara&output=embed&hl=id"
+          width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!--         FOOTER        -->
+  <!-- ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <div class="footer-brand">
+          <img src="images/logo/awal.jpg" alt="logo dokter " class="logo-img" class="footer-logo" />
+          <p>Lydia Skin Clinic</p>
+          <small>LyRich by dr. Lydia</small>
+        </div>
+
+        <nav class="footer-links">
+          <a href="#beranda">Beranda</a>
+          <a href="#layanan">Layanan</a>
+          <a href="#dokter">Dokter</a>
+          <a href="#kontak">Kontak</a>
+        </nav>
+
+        <div class="footer-social">
+          <a href="https://www.instagram.com/lydiaskinclinic/" target="_blank" rel="noopener noreferrer">Instagram
+            @lydiaskinclinic</a>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Lydia Skin Clinic. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===================== -->
+  <!--   WA FLOATING BUTTON  -->
+  <!-- ===================== -->
+  <a href="https://wa.me/6281370714324?text=Halo,%20saya%20ingin%20informasi%20lebih%20lanjut%20tentang%20Lydia%20Skin%20Clinic"
+    class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+    <!-- Icon WhatsApp dalam bentuk SVG (tidak butuh gambar eksternal) -->
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

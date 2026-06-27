@@ -1,0 +1,1027 @@
+/* ===================================================
+   LYDIA SKIN CLINIC — style.css
+   Tema: Pink & Putih | Font: Playfair Display + Inter
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===== VARIABEL WARNA ===== */
+:root {
+  --primary: #D4769A;         /* Rose pink utama */
+  --primary-dark: #B5446E;    /* Pink gelap untuk hover */
+  --primary-light: #F9D0E3;   /* Pink sangat muda untuk background */
+  --bg: #FFFFFF;              /* Background utama: putih */
+  --bg-soft: #FFF5F8;         /* Background section: pink sangat pucat */
+  --text: #2D2D2D;            /* Warna teks utama */
+  --muted: #6B7280;           /* Teks abu-abu (deskripsi, subtitle) */
+  --border: #F0D6E4;          /* Warna garis border */
+  --shadow: 0 10px 30px rgba(212, 118, 154, 0.12);
+  --radius: 20px;             /* Border radius untuk card */
+}
+
+/* ===== RESET DASAR ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== CONTAINER (pembungkus konten agar tidak terlalu lebar) ===== */
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+/* ===== LABEL SECTION (pill kecil di atas judul) ===== */
+.section-label {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== HEADING H2 ===== */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+/* ===== TOMBOL UTAMA ===== */
+.btn-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 8px 20px rgba(212, 118, 154, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ===== TOMBOL OUTLINE (border saja) ===== */
+.btn-outline {
+  display: inline-block;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+
+/* ======================================= */
+/*               NAVBAR                    */
+/* ======================================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  gap: 20px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* mix-blend-mode: multiply → bikin background putih logo 'menghilang' */
+.logo-img {
+  height: 42px;
+  width: auto;
+  mix-blend-mode: multiply;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.btn-book {
+  background: var(--primary);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.btn-book:hover {
+  background: var(--primary-dark);
+}
+
+/* Hamburger icon (3 garis) untuk mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animasi hamburger → X saat menu dibuka */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ======================================= */
+/*                 HERO                    */
+/* ======================================= */
+.hero {
+  background: var(--bg-soft);
+}
+
+.hero-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+
+.hero-eyebrow {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 36px;
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Area foto dokter/klinik */
+.hero-card-inner {
+  background: var(--primary-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-placeholder {
+  text-align: center;
+  color: var(--primary-dark);
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+.hero-placeholder p:first-child {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+/* Badge kecil di pojok bawah foto */
+.hero-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: white;
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow);
+  max-width: 290px;
+}
+
+.hero-badge > span {
+  font-size: 1.8rem;
+}
+
+.hero-badge strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.hero-badge p {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+
+/* ======================================= */
+/*            TENTANG KLINIK               */
+/* ======================================= */
+.about .container {
+  text-align: center;
+}
+
+.about-desc {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.keunggulan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.keunggulan-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.keunggulan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.keunggulan-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.keunggulan-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.keunggulan-card p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+
+/* ======================================= */
+/*          PROMO MORNING PERSON           */
+/* ======================================= */
+.promo-morning {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+}
+
+.promo-morning .container {
+  padding: 70px 0;
+}
+
+.promo-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.promo-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.promo-morning h2 {
+  color: white;
+  margin-bottom: 14px;
+}
+
+.promo-morning p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 14px;
+}
+
+.promo-time {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 0.93rem;
+  margin-bottom: 28px !important;
+}
+
+/* Tombol di section promo pakai warna putih */
+.promo-morning .btn-primary {
+  background: white;
+  color: var(--primary-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.promo-morning .btn-primary:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.promo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.promo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 14px 20px;
+}
+
+.promo-name {
+  font-weight: 500;
+}
+
+.promo-price {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+
+/* ======================================= */
+/*               LAYANAN                   */
+/* ======================================= */
+.services {
+  background: var(--bg);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.service-price {
+  display: inline-block;
+  padding: 5px 14px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Harga yang ada nilai → warna pink */
+.service-price.highlight {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+
+/* Paket Unggulan */
+.packages-label {
+  margin-top: 60px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 800px;
+}
+
+.package-card {
+  background: var(--bg-soft);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+/* Card unggulan punya border pink */
+.package-card.featured {
+  border-color: var(--primary);
+}
+
+.package-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.package-header {
+  background: var(--primary-light);
+  padding: 24px;
+  text-align: center;
+}
+
+/* Header card unggulan pakai gradient pink */
+.package-card.featured .package-header {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.package-card.featured .package-header h3,
+.package-card.featured .package-header p {
+  color: white;
+}
+
+.package-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.package-header p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.package-body {
+  padding: 24px;
+}
+
+.package-price-old {
+  color: var(--muted);
+  text-decoration: line-through;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.package-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 18px;
+}
+
+.package-body ul {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.package-body ul li {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.package-body ul li:last-child {
+  border-bottom: none;
+}
+
+
+/* ======================================= */
+/*             PROFIL DOKTER               */
+/* ======================================= */
+.doctor {
+  background: var(--bg-soft);
+}
+
+.doctor-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Placeholder foto dokter */
+.doctor-placeholder {
+  background: var(--primary-light);
+  border-radius: var(--radius);
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  opacity: 0.6;
+  font-size: 0.9rem;
+  gap: 8px;
+}
+
+.doctor-placeholder p:first-child {
+  font-size: 3rem;
+}
+
+.doctor-info h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 6px;
+}
+
+.doctor-title {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.doctor-info > p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.doctor-stats {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stat span {
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+
+
+/* ======================================= */
+/*              TESTIMONI                  */
+/* ======================================= */
+.testimonial {
+  background: var(--bg);
+  text-align: center;
+}
+
+/* Tombol ke Instagram dengan gradient warna IG */
+.btn-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(220, 39, 67, 0.3);
+}
+
+.btn-ig:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+
+/* ======================================= */
+/*                KONTAK                   */
+/* ======================================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-item p,
+.contact-item a {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.contact-item a {
+  color: var(--primary);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover {
+  color: var(--primary-dark);
+}
+
+.contact-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+
+/* ======================================= */
+/*                FOOTER                   */
+/* ======================================= */
+.footer {
+  background: #1A1A2E;
+  color: #9CA3AF;
+}
+
+.footer .container {
+  padding: 50px 0 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Logo di footer pakai filter putih */
+.footer-logo {
+  height: 42px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  color: white;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+.footer-brand small {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--primary-light);
+}
+
+.footer-bottom {
+  border-top: 1px solid #2D2D4E;
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+
+/* ======================================= */
+/*           WA FLOATING BUTTON            */
+/* ======================================= */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  background: #25D366;
+  color: white;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+
+/* ======================================= */
+/*              RESPONSIVE                 */
+/* ======================================= */
+
+/* Tablet & layar sedang */
+@media (max-width: 900px) {
+
+  /* Hamburger muncul, nav links jadi dropdown */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px 5%;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Hero jadi 1 kolom */
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 70px 0 60px;
+    gap: 40px;
+  }
+
+  .hero-sub {
+    margin: 0 auto 36px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .hero-card {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -16px;
+    width: fit-content;
+  }
+
+  /* Section tentang */
+  .keunggulan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Promo jadi 1 kolom */
+  .promo-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Layanan jadi 2 kolom */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Paket jadi 1 kolom */
+  .packages-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Dokter jadi 1 kolom */
+  .doctor-content {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-placeholder {
+    aspect-ratio: 16/7;
+  }
+
+  /* Kontak jadi 1 kolom */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer jadi kolom */
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .doctor-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .wa-float {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+}
+  .contact-icon svg {
+      fill: #25D366;
+  }
+  
+  .contact-icon svg {
+      fill: url(#instagram-gradient) #E4405F;
+  }
+  
