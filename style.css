@@ -895,7 +895,9 @@ h2 {
 
 /* Tablet & layar sedang */
 @media (max-width: 900px) {
-
+   .btn-book {
+      display:none;
+   }
   /* Hamburger muncul, nav links jadi dropdown */
   .hamburger {
     display: flex;
