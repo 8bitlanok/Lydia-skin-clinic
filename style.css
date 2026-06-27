@@ -895,9 +895,15 @@ h2 {
 
 /* Tablet & layar sedang */
 @media (max-width: 900px) {
-   .btn-book {
-      display:none;
-   }
+
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  .btn-book {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
   /* Hamburger muncul, nav links jadi dropdown */
   .hamburger {
     display: flex;
